@@ -9,6 +9,8 @@
     <origin xyz="-0.040035527046847215 1.4254718786836187e-07 0.18576319015090628" rpy="0 0 0"/>
     <mass value="22.51991652849534"/>
     <inertia ixx="0.608319" iyy="0.424091" izz="0.671314" ixy="-1e-06" iyz="1e-06" ixz="-0.004979"/>
+    <!-- <mass value="8.0"/>
+    <inertia ixx="0.05" iyy="0.04" izz="0.06" ixy="0.0" iyz="0.0" ixz="0.0"/> -->
   </inertial>
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -88,6 +90,27 @@
   </collision>
 </link>
 
+<!-- <link name="caster">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.1"/>
+    <inertia ixx="1e-4" iyy="1e-4" izz="1e-4" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="0.03"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="0.03"/>
+    </geometry>
+  </collision>
+</link> -->
+
 <joint name="left_wheel_joint" type="continuous"> 
   <origin xyz="0.0 0.176 0.05" rpy="0 0 0"/>
   <parent link="base_link"/>
@@ -107,5 +130,11 @@
   <parent link="base_link"/>
   <child link="lidar_1"/>
 </joint>
+
+<!-- <joint name="caster_joint" type="fixed">
+  <origin xyz="-0.15 0.0 0.03" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster"/>
+</joint> -->
 
 </robot>
