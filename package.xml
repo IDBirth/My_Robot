@@ -17,6 +17,10 @@
   <test_depend>ament_lint_common</test_depend>
   <test_depend>python3-pytest</test_depend>
 
+  <exec_depend>slam_toolbox</exec_depend>
+
+  <odom_topic>odom</odom_topic>
+
   <export>
     <build_type>ament_python</build_type>
   </export>
